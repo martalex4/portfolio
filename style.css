@@ -24,27 +24,6 @@ header {
 h1 {
     font-size: 60px;
     margin: 50px;
-    animation-name: slide-in;
-    animation-duration: 0.5s;
-}
-
-h2 {
-    animation-name: slide-in;
-    animation-duration: 0.5s;
-    animation-delay: 0.2s;
-    animation-fill-mode: backwards;
-}
-
-@keyframes slide-in {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
 }
 
 main {
@@ -58,7 +37,7 @@ main {
 
 button {
     width: 200px;
-    height: 80px;
+    height: 60px;
     border: none;
     border-radius: 20px;
     background: linear-gradient(to right, darkviolet, #fff0, #fff0, crimson);
@@ -87,13 +66,13 @@ button::before {
 button:hover {
     background: linear-gradient(to right, white, #fff0, #fff0, white);
     width: 250px;
-    height: 100px;
+    height: 75px;
 }
 
 button:active {
     background-color: white;
-    width: 225px;
-    height: 90px;
+    width: 220px;
+    height: 66px;
 }
 
 button:hover::before {
@@ -115,4 +94,26 @@ button span {
     h1 {
         font-size: 40px;
     }
+}
+
+.slide-in {
+    animation-name: slide-in;
+    animation-duration: 0.3s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.highlight {
+    animation: ;
 }
