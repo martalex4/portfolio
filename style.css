@@ -1,0 +1,99 @@
+html {
+    background: linear-gradient(to right, #8000ff, black, red);
+    height: 100%;
+    color: white;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    max-width: 90%;
+    justify-self: center;
+}
+
+
+header {
+    justify-self: center;
+    align-content: center;
+    height: 45%;
+    max-width: 90%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 50px;
+}
+
+
+main {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 45%;
+}
+
+button {
+    width: 200px;
+    height: 80px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #8000ff, #fff0, #fff0, red);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+button::before {
+    position: absolute;
+    content: "";
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96%;
+    height: 90%;
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, white, #fff0, #fff0, white);
+    width: 250px;
+    height: 100px;
+}
+
+button:active {
+    background-color: white;
+    width: 225px;
+    height: 90px;
+}
+
+button:hover::before {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+button:active::before {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+button span {
+    z-index: 1;
+    color: white;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media (width < 500px) {
+    h1 {
+        font-size: 40px;
+    }
+}
