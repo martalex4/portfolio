@@ -1,5 +1,5 @@
 html {
-    background: linear-gradient(to right, #8000ff, black, red);
+    background: linear-gradient(to right, darkviolet, black, crimson);
     height: 100%;
     color: white;
 }
@@ -10,7 +10,6 @@ body {
     max-width: 90%;
     justify-self: center;
 }
-
 
 header {
     justify-self: center;
@@ -25,8 +24,28 @@ header {
 h1 {
     font-size: 60px;
     margin: 50px;
+    animation-name: slide-in;
+    animation-duration: 0.5s;
 }
 
+h2 {
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
 
 main {
     display: flex;
@@ -42,7 +61,7 @@ button {
     height: 80px;
     border: none;
     border-radius: 20px;
-    background: linear-gradient(to right, #8000ff, #fff0, #fff0, red);
+    background: linear-gradient(to right, darkviolet, #fff0, #fff0, crimson);
     position: relative;
     display: flex;
     align-items: center;
