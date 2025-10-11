@@ -18,12 +18,10 @@ function slideIn() {
         if (sliders[index].parentElement != parent)
         {
             parent = sliders[index].parentElement;
-            delay += 0.3;
+            delay += 0.4;
         }
         sliders[index].style.animationDelay = `${delay}s`;
-        console.log(delay);
-        delay += 0.1;
-        console.log(`Parent element: ${parent.nodeName}`);
+        delay += 0.2;
     }
 }
 

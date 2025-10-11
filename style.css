@@ -7,7 +7,6 @@ html {
 body {
     height: 100%;
     margin: 0;
-    max-width: 90%;
     justify-self: center;
 }
 
@@ -21,17 +20,12 @@ header {
     text-align: center;
 }
 
-h1 {
-    font-size: 60px;
-    margin: 50px;
-}
-
 main {
     display: flex;
-    justify-self: center;
     flex-direction: column;
-    align-items: center;
+    justify-self: center;
     justify-content: space-evenly;
+    align-items: center;
     height: 45%;
 }
 
@@ -46,7 +40,7 @@ button {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 button::before {
@@ -60,13 +54,13 @@ button::before {
     height: 90%;
     border-radius: 16px;
     background-color: rgba(0, 0, 0, 0.4);
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 button:hover {
     background: linear-gradient(to right, white, #fff0, #fff0, white);
-    width: 250px;
-    height: 75px;
+    width: 230px;
+    height: 69px;
 }
 
 button:active {
@@ -90,12 +84,6 @@ button span {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-@media (width < 500px) {
-    h1 {
-        font-size: 40px;
-    }
-}
-
 .slide-in {
     animation-name: slide-in;
     animation-duration: 0.3s;
@@ -112,8 +100,4 @@ button span {
         opacity: 1;
         transform: translateX(0vw);
     }
-}
-
-.highlight {
-    animation: ;
 }
