@@ -1,131 +1,302 @@
-html {
-    background: linear-gradient(to right, darkviolet, black, crimson);
-    height: 100%;
-    color: white;
+:root {
+    --background-color: #222;
+    --btn-text-color: #222;
+    --project-card-bg: #fff;
+    --text-color: #fff;
+    --form-text-color: #fff;
+    --button-shadow: #00000080;
 }
 
 body {
-    height: 100%;
-    margin: 0;
-    justify-self: center;
-}
-
-header {
-    justify-self: center;
-    align-content: center;
-    height: 45%;
-    max-width: 90%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    justify-items: center;
-    text-align: center;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    justify-self: center;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 45%;
+    gap: 60px;
 }
 
-button {
-    width: 200px;
-    height: 60px;
-    border: none;
-    border-radius: 20px;
-    background: linear-gradient(to right, darkviolet, #fff0, #fff0, crimson);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: 0.3s ease;
-    color: white;
+h1,
+h2,
+h3,
+p {
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
 }
 
-button::before {
-    position: absolute;
-    content: "";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 96%;
-    height: 90%;
-    border-radius: 16px;
-    background-color: rgba(0, 0, 0, 0.4);
-    transition: 0.3s ease;
+h2,
+h3,
+p,
+input,
+textarea {
+    font-family: Roboto Mono, monospace;
 }
 
-button:hover {
-    background: linear-gradient(to right, white, #fff0, #fff0, white);
-    width: 230px;
-    height: 69px;
+h1,
+h2 {
+    text-transform: uppercase;
 }
 
-button:active {
-    background-color: white;
-    width: 220px;
-    height: 66px;
-}
-
-button:hover::before {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-button:active::before {
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-span {
-    z-index: 1;
+h2,
+h3 {
     font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-section {
-    display: none;
-    background-color: white;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    top: 20px;
-    left: 20px;
-    bottom: 20px;
-    right: 20px;
+h1,
+.button {
+    background: linear-gradient(to right, darkviolet, crimson);
+}
+
+input,
+textarea,
+button,
+.projects img {
     border-radius: 20px;
-    z-index: 2;
 }
 
-section::before {
-    position: absolute;
-    content: "";
-    top: 20px;
-    left: 20px;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 16px;
-    background-color: rgba(0, 0, 0, 0.9);
+h1 {
+    font-family: Rubik, sans-serif;
+    font-size: 32px;
+    margin-bottom: 30px;
+    background-clip: text;
+    color: transparent;
 }
 
-section div {
-    z-index: 3;
+p {
+    font-size: 16px;
+    font-weight: 300;
 }
 
-.slide-in {
-    animation-name: slide-in;
-    animation-duration: 0.3s;
-    animation-fill-mode: backwards;
+.button {
+    cursor: pointer;
+    color: var(--btn-text-color);
+    border: none;
+    width: 130px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0 4px 4px var(--button-shadow);
+    transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
 }
 
-@keyframes slide-in {
-    0% {
-        opacity: 0;
-        transform: translateX(-100vw);
+.button:hover,
+.projects a:hover {
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 2px var(--button-shadow);
+}
+
+.me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    height: 100dvh;
+    min-height: 500px;
+}
+
+.me span {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.desc {
+    max-width: 30ch;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+textarea,
+input:not([type=submit]) {
+    height: 50px;
+    padding-left: 16px;
+    width: 250px;
+}
+
+textarea {
+    padding-top: 16px;
+    resize: none;
+    height: 250px;
+}
+
+input,
+textarea {
+    border: #888 1px solid;
+    box-sizing: border-box;
+    justify-self: center;
+    background-color: var(--background-color);
+    color: var(--form-text-color);
+}
+
+::placeholder {
+    color: var(--form-text-color);
+}
+
+input[type=submit] {
+    margin: auto;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.projects img {
+    max-height: 140px;
+}
+
+.projects a {
+    width: fit-content;
+    text-decoration: none;
+    transition: transform .2s ease-in-out;
+}
+
+.projects div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.skills div {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    min-width: 260px;
+    max-width: 26ch;
+}
+
+hr {
+    width: 100px;
+    height: 1px;
+    border: none;
+    background-color: var(--text-color);
+    margin: 30px auto;
+}
+
+@media (width >=800px) {
+    main {
+        gap: 100px;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0vw);
+    h1 {
+        font-size: 40px;
+    }
+
+    h2,
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .title {
+        margin-bottom: 60px;
+    }
+
+    .me {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .me .photo {
+        width: 350px;
+        height: 350px;
+    }
+
+    textarea,
+    input:not([type=submit]) {
+        width: 600px;
+        font-size: 20px;
+    }
+
+    form {
+        gap: 40px;
+    }
+
+    .projects div {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .skills div {
+        max-width: fit-content;
+        gap: 30px;
+    }
+
+    hr {
+        width: 300px;
+    }
+}
+
+@media (width >=1400px) {
+    main {
+        gap: 200px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .title {
+        margin-bottom: 75px;
+    }
+
+    .me .photo {
+        width: 400px;
+        height: 400px;
+    }
+
+    textarea,
+    input:not([type=submit]) {
+        width: 800px;
     }
 }

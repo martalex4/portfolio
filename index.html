@@ -4,58 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&amp;family=Rubik:wght@800&amp;display=swap"
+    rel="stylesheet">
+    
     <title>Alexandre Martinez</title>
+    <link rel="icon" href="assets/BiscuitPartyBlue.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1 class="slide-in">Alexandre Martinez</h1>
-        <h3 class="slide-in">Alternant informatique<br>pré-MSc - Epitech</h2>
-    </header>
-
     <main>
-        <button class="slide-in">
-            <span>About Me</span>
-            <section>
+        <section class="me">
+            <div>
+                <img src="assets/MartAlex.jpg" alt="Photo" class="photo">
+            </div>
+            <div class="info">
+                <h1>Alexandre<br>Martinez</h1>
+                <h2>Alternant informatique<br>pré-MSc - Epitech</h2>
+                <p class="desc"><q>Le succès vient de la curiosité, de la concentration, de la persévérance et de l'autocritique.</q></p><p>—Albert Einstein</p>
+                <a href="assets/CV_Alexandre_Martinez.pdf" download>
+                    <button class="button"><span>CV</span></button>
+                </a>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h1 class="title">Projets</h1>
+            <div>
+                <a href="https://evoluape.itch.io/evoluape" target="_blank">
+                    <img src="assets/EvoluApeTitre.png" alt="EvoluApe">
+                    <img src="assets/EvoluApeGame.png" alt="EvoluApe">
+                    <h3>EvoluApe</h3>
+                    <p class="desc">Gorille ou gibbon ?<br>Évoluez et échappez au feu dans une course aux bananes !</p>
+                </a>
+                <a href="https://biscuitparty.itch.io/biscuit-party" target="_blank">
+                    <img src="assets/BiscuitPartyBlue.png" alt="Biscuit Party">
+                    <img src="assets/BiscuitPartyGame.webp" alt="Biscuit Party">
+                    <h3>Biscuit Party</h3>
+                    <p class="desc">Envie de craquer ?<br>Affrontez vos amis dans un party game frénétique !</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h1 class="title">Compétences</h1>
+            <div>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+            </div>
+            <hr>
+            <div>
+                <p>C#</p>
+                <p>Java</p>
+                <p>Python</p>
+            </div>
+            <hr>
+            <div>
+                <p>Unity</p>
+                <p>Unreal Engine</p>
+            </div>
+            <hr>
+            <div>
+                <p>Git</p>
+                <p>Github</p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h1 class="title">Contact</h1>
+            <form>
                 <div>
-                    <h1>Hi</h1>
-                    <p></p>
+                    <label for="name"></label>
+                    <input type="text" placeholder="Name" id="name" name="name" required>
                 </div>
-            </section>
-        </button>
-        <button class="slide-in">
-            <span>Skills</span>
-            <section>
                 <div>
-                    <h1>Hi</h1>
-                    <p></p>
+                    <label for="email"></label>
+                    <input type="email" placeholder="E-mail" id="email" name="email" required>
                 </div>
-            </section>
-        </button>
-        <button class="slide-in">
-            <span>Projects</span>
-            <section>
                 <div>
-                    <h1>Hi</h1>
-                    <p></p>
+                    <label for="message"></label>
+                    <textarea placeholder="Message" id="message" name="message" required></textarea>
                 </div>
-            </section>
-        </button>
-        <button class="slide-in">
-            <span>Contact</span>
-            <section>
-                <div>
-                    <h1>Hi</h1>
-                    <p></p>
-                </div>
-            </section>
-        </button>
+                <input type="submit" value="Submit" class="button">
+            </form>
+        </section>
     </main>
 
-    <footer></footer>
-
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>
