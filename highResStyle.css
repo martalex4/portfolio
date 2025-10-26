@@ -1,0 +1,82 @@
+@media (width >=800px) {
+    main {
+        gap: 100px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2,
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .title {
+        margin-bottom: 60px;
+    }
+
+    .me {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .photo {
+        width: 350px;
+        height: 350px;
+    }
+
+    textarea,
+    input:not([type=submit]) {
+        width: 600px;
+        font-size: 20px;
+    }
+
+    form {
+        gap: 40px;
+    }
+
+    .projects div {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .skills div {
+        max-width: fit-content;
+        gap: 30px;
+    }
+
+    hr {
+        width: 300px;
+    }
+}
+
+@media (width >=1400px) {
+    main {
+        gap: 200px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .title {
+        margin-bottom: 75px;
+    }
+
+    .photo {
+        width: 400px;
+        height: 400px;
+    }
+
+    textarea,
+    input:not([type=submit]) {
+        width: 800px;
+    }
+}

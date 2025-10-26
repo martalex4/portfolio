@@ -1,8 +1,6 @@
 :root {
     --background-color: #222;
-    --btn-text-color: #222;
     --text-color: #fff;
-    --form-text-color: #fff;
     --button-shadow: #00000080;
 }
 
@@ -22,7 +20,9 @@ main {
 h1,
 h2,
 h3,
-p {
+p,
+a,
+::placeholder {
     color: var(--text-color);
     margin: 0;
     padding: 0;
@@ -66,10 +66,6 @@ h1 {
     color: transparent;
 }
 
-a {
-    color: #fff;
-}
-
 p {
     font-size: 16px;
     font-weight: 300;
@@ -77,7 +73,7 @@ p {
 
 .button {
     cursor: pointer;
-    color: var(--btn-text-color);
+    color: var(--background-color);
     border: none;
     width: 130px;
     height: 50px;
@@ -95,6 +91,10 @@ p {
 .button:active {
     transform: translateY(2px);
     box-shadow: 0 2px 2px var(--button-shadow);
+}
+
+span a:hover {
+    transform: scale(1.1);
 }
 
 .me {
@@ -122,7 +122,7 @@ p {
 }
 
 .desc {
-    max-width: 30ch;
+    max-width: 35ch;
     text-align: center;
     margin: 0 auto;
 }
@@ -164,11 +164,7 @@ textarea {
     box-sizing: border-box;
     justify-self: center;
     background-color: var(--background-color);
-    color: var(--form-text-color);
-}
-
-::placeholder {
-    color: var(--form-text-color);
+    color: var(--text-color);
 }
 
 input[type=submit] {
@@ -186,7 +182,7 @@ input[type=submit] {
 }
 
 .projects a {
-    width: fit-content;
+    margin-inline: 20px;
     text-decoration: none;
     transition: transform .2s ease-in-out;
 }
@@ -211,7 +207,7 @@ input[type=submit] {
     flex-wrap: wrap;
     row-gap: 40px;
     min-width: 260px;
-    max-width: 26ch;
+    max-width: 35ch;
 }
 
 hr {
@@ -220,87 +216,4 @@ hr {
     border: none;
     background-color: var(--text-color);
     margin: 30px auto;
-}
-
-@media (width >=800px) {
-    main {
-        gap: 100px;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    h2,
-    h3 {
-        font-size: 24px;
-    }
-
-    p {
-        font-size: 20px;
-    }
-
-    .title {
-        margin-bottom: 60px;
-    }
-
-    .me {
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-
-    .photo {
-        width: 350px;
-        height: 350px;
-    }
-
-    textarea,
-    input:not([type=submit]) {
-        width: 600px;
-        font-size: 20px;
-    }
-
-    form {
-        gap: 40px;
-    }
-
-    .projects div {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    .skills div {
-        max-width: fit-content;
-        gap: 30px;
-    }
-
-    hr {
-        width: 300px;
-    }
-}
-
-@media (width >=1400px) {
-    main {
-        gap: 200px;
-    }
-
-    h1 {
-        font-size: 48px;
-    }
-
-    .title {
-        margin-bottom: 75px;
-    }
-
-    .photo {
-        width: 400px;
-        height: 400px;
-    }
-
-    textarea,
-    input:not([type=submit]) {
-        width: 800px;
-    }
 }
